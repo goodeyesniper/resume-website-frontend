@@ -1,0 +1,60 @@
+.hidden-text {
+  color: var(--bg-color);
+}
+
+.hidden-button {
+  opacity: 0;
+}
+
+.hidden-image {
+  opacity: 0;
+}
+
+@keyframes blindsOpen {
+  from {
+    clip-path: inset(100% 0 0 0); /* Cover text completely */
+    color: var(--bg-color);
+
+  }
+  to {
+    clip-path: inset(0 0 0 0); /* Reveal text gradually */
+    color: var(--text-color);
+
+  }
+}
+
+.blinds-effect {
+  animation: blindsOpen 0.7s ease-in-out forwards;
+}
+
+@keyframes blindsOpenDown {
+  from {
+    clip-path: inset(0 0 100% 0); /* Cover text completely */
+    opacity: 0;
+
+  }
+  to {
+    clip-path: inset(0 0 0 0); /* Reveal text gradually */
+    opacity: 1;
+  }
+}
+
+.blinds-effect-image {
+  animation: blindsOpenDown 1.0s ease-in-out forwards;
+}
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 1.5s ease-in-out forwards;
+}
