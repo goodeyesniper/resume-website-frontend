@@ -119,6 +119,17 @@ a {
   border-radius: 50%;
 }
 
+.semi-circle-white {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-top: none;
+  border-bottom: none;
+  border-right: 5px solid #fff;
+  border-left: none;
+  border-radius: 50%;
+}
+
 .letter-p {
   position: absolute;
   top: 50%;
